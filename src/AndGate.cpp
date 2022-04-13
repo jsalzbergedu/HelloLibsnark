@@ -12,38 +12,6 @@
 #include "libsnark/common/default_types/r1cs_ppzksnark_pp.hpp"
 #include "AndGate.tcc"
 
-// TODO thread together and and or gate
-// TODO setup tests :-)
-// TODO: Implement OR gate
-// TODO: Implement XOR gate
-// TODO: Implement NOT gate
-// TODO: Implement NAND gate
-
-// TODO Begin implementing kruskall like thing
-
-/*
- * Notes:
- * How do you pass it input? (Public witnesses? protoboard?)
- * * Public and private inputs, _along with_ parameters
- * How do you take its output? Only one bit? (Oh, public witnesses (?))
- * * Public witness values yea
- * What get's produced in proving?
- * * 1 bit = proved + public witnesses
- * What's pb primary input, pb auxillary input?
- * * Primary input = public witnesses
- * * Auxilary input = ???
- * How do you hook together two circuits?
- * * I believe you can just reuse variables.
- * How do you incorporate benes networks/clos networks?
- * * TODO
- * Why did he put x and y as private?
- * * Because they're also input (?) because the verf doesnt have to know them
- * How is it constrained to binary?
- * * You have to add it as a constraint, not as witness gen!
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- * Ok time to build a testable project
- */
-
 int main() {
   // Initialize curve parameters
   libsnark::default_r1cs_ppzksnark_pp::init_public_params();
